@@ -1,8 +1,8 @@
-# cs4076-zork
+## cs4076-zork
 
-GUI game made in C++ using QT Creator. Created by Imelda Butler.
+# GUI game made in C++ using QT Creator. Created by Imelda Butler.
 
-virtual functions - done
+- [x] virtual functions - done
 
 header files (inclusion guards) - done
 
