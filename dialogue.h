@@ -14,7 +14,12 @@ struct Dialogue{
 
 namespace dialogue{
 const static string welcome = "start\n"
-                              "     info for help\n";
+                              "navigate with buttons\n"
+                              "click on doors to go into different rooms";
+const static string map =         " [???]   ---               ---    \n"
+                                  "                   |         \n"
+                                  "                   |         \n"
+                                  "[office] --- [living room] --- [bathroom]";
 const static string inputError = "Invalid command, please try again\n";
 const static string lockedRoom = "The lab\n"
                                  "Access to Stark, Anthony only. Please put on helmet and verify identity\n";
@@ -76,12 +81,24 @@ namespace RoomDialogue{
                      "there is a door in front of you, next to the fluffy\n"
                      "white towels";
 
-    const string o_n="you are now facing the north wall of the office\n";
-    const string o_s="you are now facing the south wall of the office\n";
-    const string o_e="you are now facing the east wall of the office\n";
-    const string o_w="you are now facing the west wall of the office\n";
+    const string o_n="you are now facing the north wall of the office\n"
+                     "there are a set of blueprints up on the wall.\n"
+                     "next to it, an eerie doorway with stairs.\n"
+                     "it is currently locked\n";
+    const string o_s="you are now facing the south wall of the office\n"
+                     "in front of you, there is a computer, and it is locked with\n"
+                     "a password. \n"
+                     "a sticky note next to you says; don't forget your \n"
+                     "password is wordle now!";
+    const string o_e="you are now facing the west wall of the office\n"
+                     "there is a door in front of you\n";
+    const string o_w="you are now facing the east wall of the office\n"
+                     "a table covered in all kinds of bits and bobs is\n"
+                     "in front of you. The arm gauntlets that you were working\n"
+                     "on lay in the cluster";
 
-    const string l_n="you are now facing the north wall of the lab\n";
+    const string l_n="you are now facing the north wall of the lab\n"
+                     "end of game here, add conclusion";
     const string l_s="you are now facing the south wall of the lab\n";
     const string l_e="you are now facing the east wall of the lab\n";
     const string l_w="you are now facing the west wall of the lab\n";

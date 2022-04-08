@@ -26,6 +26,9 @@ public:
     void parseInput(const string &input);
 
 private slots:
+  //  void on_info_button_released();
+  //  void on_quit_button_released();
+    void on_map_button_released();
     void on_right_button_released();
     void on_left_button_released();
     void on_door_released();

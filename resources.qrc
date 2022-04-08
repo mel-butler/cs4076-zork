@@ -9,5 +9,10 @@
         <file>b_w.png</file>
         <file>door.png</file>
         <file>b_s.png</file>
+        <file>lr_w.png</file>
+        <file>lr_s.png</file>
+        <file>tempdoor.png</file>
+        <file>east.png</file>
+        <file>west.png</file>
     </qresource>
 </RCC>

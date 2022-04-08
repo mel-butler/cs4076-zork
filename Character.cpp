@@ -1,8 +1,13 @@
-#include "Character.h"
+/*#include "Character.h"
 #include <vector>
 
 Character::Character(string description) {
 	this->description = description;
+}
+
+Character::Character(string name, string description){
+    this->name = name;
+    this->description = description;
 }
 
 string Character::longDescription()
@@ -28,4 +33,4 @@ void Character::removeItem(Item *item)
     }
 }
 
-
+*/

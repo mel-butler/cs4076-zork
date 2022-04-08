@@ -32,12 +32,12 @@ void ZorkUL::createRooms()  {
     lr_n = new Room(RoomDialogue::lr_n, false);
         lr_n->addImage(new Image(":/img/lr_n.png"));
     lr_s = new Room(RoomDialogue::lr_s, false);
-        lr_s->addImage(new Image(":/img/b_e.png"));
+        lr_s->addImage(new Image(":/img/lr_s.png"));
         lr_s->addItem(new Item("leg_armour"));
     lr_e = new Room(RoomDialogue::lr_e, false);
         lr_e->addImage(new Image(":/img/door.png"));
     lr_w = new Room(RoomDialogue::lr_w, false);
-        lr_w->addImage(new Image(":/img/b_e.png"));
+        lr_w->addImage(new Image(":/img/lr_w.png"));
 
     b_n = new Room(RoomDialogue::b_n, false);
         b_n->addImage(new Image(":/img/b_n.png"));
@@ -50,16 +50,24 @@ void ZorkUL::createRooms()  {
         b_w->addImage(new Image(":/img/b_w.png"));
 
     o_n = new Room(RoomDialogue::o_n, false);
+        o_n->addImage(new Image(":/img/tempdoor.png"));
     o_s = new Room(RoomDialogue::o_s, false);
+        o_s->addImage(new Image(":/img/lr_s.png"));
     o_e = new Room(RoomDialogue::o_e, false);
+        o_e->addImage(new Image(":/img/door.png"));
     o_w = new Room(RoomDialogue::o_w, false);
+        o_w->addImage(new Image(":/img/west.png"));
         o_w->addItem(new Item("arm_gauntlets"));
 
     l_n = new Room(RoomDialogue::l_n, false);
-        o_w->addItem(new Item("chestplate"));
+        l_n->addImage(new Image(":/img/lr_n.png"));
+        l_n->addItem(new Item("chestplate"));
     l_s = new Room(RoomDialogue::l_s, true);
+        l_s->addImage(new Image(":/img/tempdoor.png"));
     l_e = new Room(RoomDialogue::l_e, false);
+        l_e->addImage(new Image(":/img/east.png"));
     l_w = new Room(RoomDialogue::l_w, false);
+        l_w->addImage(new Image(":/img/west.png"));
 
 
 

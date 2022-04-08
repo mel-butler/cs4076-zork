@@ -65,6 +65,10 @@ void MainWindow::on_right_button_released(){
     updateImage(imageDes);
 }
 
+void MainWindow::on_map_button_released(){
+     ui->outputConsole->setText(toQString(dialogue::map));
+}
+
 void MainWindow::on_left_button_released(){
     zork->go("left");
      ui->outputConsole->setText(QString::fromStdString(zork->currentRoom->longDescription()));

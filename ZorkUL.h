@@ -21,7 +21,7 @@ private:
     void createRooms();
 
 	bool processCommand(Command command);
-	void printHelp();
+    void printHelp();
     void goRoom(Command command);
     void openDoor(Command command);
     string go(string direction);

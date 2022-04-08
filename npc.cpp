@@ -1,4 +1,4 @@
-#include "npc.h"
+/*#include "npc.h"
 
 NPC::NPC(string name, string description, bool status) : Character(name, description)
 {
@@ -6,5 +6,5 @@ NPC::NPC(string name, string description, bool status) : Character(name, descrip
 }
 
 NPC::~NPC(){}
-
+*/
 
