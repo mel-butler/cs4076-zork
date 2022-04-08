@@ -1,54 +1,53 @@
-## cs4076-zork
+# cs4076-zork
 
-# GUI game made in C++ using QT Creator. Created by Imelda Butler.
+## GUI game made in C++ using QT Creator. Created by Imelda Butler.
 
-- [x] virtual functions - done
+- [x] virtual functions 
 
-header files (inclusion guards) - done
+- [x] header files (inclusion guards) 
 
-arrays and pointers - done
+- [x] arrays and pointers
 
-friendship - done
+- [x] friendship
 
-global variables - done
+- [x] global variables 
 
-private, public, protected - done
+- [x] private, public, protected 
 
-c++ references - done
+- [x] c++ references 
 
-pointers - done
+- [x] pointers 
 
-namespaces - done
+- [x] namespaces 
 
-programmer defined exceptions - done
+- [x] programmer defined exceptions
 
-operator overloading - done
+- [x] operator overloading 
 
-destructors - done
+- [x] destructors
 
-template classes - done
+- [x] template classes
 
-advanced pre-processors directives - done??? i think
+- [x] advanced pre-processors directives
+
+- [x] inheritance
+
+- [x] initializer list
 
 
 
 
 
+- [] unions
 
-unions
+- [] abstract classes
 
-abstract classes
+- [] copy constructors (deep, shallow copy)
 
-copy constructors (deep, shallow copy)
+- [] bit structures
 
-bit structures
+- [] c++ object construction sequence
 
-c++ object construction sequence
+- [] multiple inheritance
 
-initializer list
-
-multiple inheritance
-
-inheritance
-
-memory management
+- []  memory management
