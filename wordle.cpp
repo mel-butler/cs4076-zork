@@ -4,7 +4,6 @@ Wordle::Wordle()
 {
     allowed_guesses(":/text/wordle_words");
     solutionWord = "death";
-    guess_count = 0;
     game_won = false;
 }
 
@@ -24,12 +23,11 @@ void Wordle::allowed_guesses(string fileName)
     }
 }
 
-
-
 int Wordle::arraySize()
 {
     return sizeof(guess_words)/sizeof(guess_words[0]);
 }
+
 
 
 bool Wordle::check_if_occurs(const string &guess)
@@ -49,7 +47,7 @@ bool Wordle::check_if_occurs(const string &guess)
 //g green y yellow
 vector<string> Wordle::checkLetter(const string &guess)
 {
-    string solution = solutionWord;
+    string solution = "death";
     char preventDuplication='0';
     vector<string> letterColour(static_cast<int>(guess.size()));
     for(int i=0;i<5;i++){
@@ -90,7 +88,7 @@ string Wordle::play(const string &guess)
     vector<string>letterColour;
 
     if(guess.length()>5 || guess.length()<5){
-        output = "incorrect password\n"
+        output = "incorrect length\n"
                  "hint: five letter word";
         return output;
     }else if(!check_if_occurs(guess)){

@@ -8,5 +8,6 @@
         <file>b_n.png</file>
         <file>b_w.png</file>
         <file>door.png</file>
+        <file>b_s.png</file>
     </qresource>
 </RCC>

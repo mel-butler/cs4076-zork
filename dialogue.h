@@ -18,18 +18,15 @@ const static string welcome = "start\n"
 const static string inputError = "Invalid command, please try again\n";
 const static string lockedRoom = "The lab\n"
                                  "Access to Stark, Anthony only. Please put on helmet and verify identity\n";
-
 const string lockedRoomUnlocked = "Verification: Tony Stark, welcome home";
+}
 
-const string welcomeComputer = "Insert Password\n";
-
-const string passwordIncorrect = "Please try again\n";
+namespace wordle{
+const string welcomeComputer = "Insert Password\n"
+                               "hint: guess the correct five letter word\n";
 
 const string passwordSuccess = "Welcome, STARK\n";
 
-const string wordleOutOfAttempts = "Password Incorrect\n";
-
-const string passwordAttempts = "Password Incorrect, please try again\n";
 }
 
 namespace RoomDialogue{
@@ -53,8 +50,8 @@ namespace RoomDialogue{
 
     const string b_n="you are now facing the north wall of the bathroom\n"
                      "there is a mirror in front of you. when you look at your\n"
-                     "reflection\n"
-                     "a tired man stares back. your eyebags are far too prominent, "
+                     "reflection a tired man stares back. your\n"
+                     " eyebags are far too prominent, \n"
                      "and your face far too weary. a multitude of bandages\n"
                      "and plasters cover your  face and body\n"
                      "would be nice to have something cover  your face. \n "

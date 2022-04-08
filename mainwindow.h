@@ -29,6 +29,8 @@ private slots:
     void on_right_button_released();
     void on_left_button_released();
     void on_door_released();
+    void on_wordle_released();
+    void on_wordleEdit_returnPressed();
 
 private:
     QString imageDes;

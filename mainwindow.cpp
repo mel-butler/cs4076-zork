@@ -1,6 +1,9 @@
 #include "mainwindow.h"
 #include "ui_mainwindow.h"
+#include "ZorkUL.h"
+#include "wordle.h"
 #include <QTimer>
+#include <QString>
 
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent),
@@ -20,6 +23,12 @@ MainWindow::MainWindow(QWidget *parent) :
 
     imageDes = toQString(zork->getCurrentRoom()->getImages().at(0)->getImage());
     updateImage(imageDes);
+
+    ui->wordleEdit->setVisible(false);
+    ui->wordle_input->setVisible(false);
+    ui->wordle->setVisible(false);
+
+
 }
 
 MainWindow::~MainWindow()
@@ -45,6 +54,10 @@ void MainWindow::updateImage(QString dest)
 
 
 
+
+
+
+
 void MainWindow::on_right_button_released(){
     zork->go("right");
      ui->outputConsole->setText(QString::fromStdString(zork->currentRoom->longDescription()));
@@ -64,4 +77,23 @@ void MainWindow::on_door_released(){
      ui->outputConsole->setText(QString::fromStdString(zork->currentRoom->longDescription()));
     imageDes = toQString(zork->getCurrentRoom()->getImages().at(0)->getImage());
     updateImage(imageDes);
+}
+
+void MainWindow::on_wordle_released(){
+    ui->wordleEdit->setVisible(true);
+    ui->wordle_input->setVisible(true);
+    ui->outputConsole->setText(toQString(wordle::welcomeComputer));
+}
+
+void MainWindow::on_wordleEdit_returnPressed()
+{
+      //players input
+      QString wordleInput = ui->wordleEdit->text();
+      ui->outputConsole->setText(toQString(computer->play(wordleInput.toStdString())));
+      //if game is won it allows the player to progress
+      if(computer->game_won){
+          ui->outputConsole->setText(toQString(wordle::passwordSuccess));
+          ui->wordleEdit->setVisible(false);
+          ui->wordle_input->setVisible(false);
+      }
 }

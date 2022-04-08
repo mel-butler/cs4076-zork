@@ -18,7 +18,6 @@ public:
     bool check_if_correct(const vector<string> &letterColour);
     string play(const string &guess);
     string printNextLine();
-    int guess_count;
     bool game_won;
 private:
     vector<string> checkLetter(const string &guess);

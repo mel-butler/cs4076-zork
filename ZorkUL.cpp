@@ -42,7 +42,7 @@ void ZorkUL::createRooms()  {
     b_n = new Room(RoomDialogue::b_n, false);
         b_n->addImage(new Image(":/img/b_n.png"));
     b_s = new Room(RoomDialogue::b_s, false);
-        b_s->addImage(new Image(":/img/b_e.png"));
+        b_s->addImage(new Image(":/img/b_s.png"));
         b_s->addItem(new Item("helmet"));
     b_e = new Room(RoomDialogue::b_e, false);
         b_e->addImage(new Image(":/img/b_e.png"));
