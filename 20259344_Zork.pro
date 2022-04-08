@@ -9,6 +9,7 @@ CONFIG += console c++11
 CONFIG -= app_bundle
 
 SOURCES += \
+        Character.cpp \
         Command.cpp \
         CommandWords.cpp \
         Parser.cpp \
@@ -28,6 +29,7 @@ DISTFILES += \
     wordle_words
 
 HEADERS += \
+    Character.h \
     Command.h \
     CommandWords.h \
     Parser.h \

@@ -1,6 +1,10 @@
 #include "npc.h"
 
-NPC::NPC()
+NPC::NPC(string name, string description, bool status) : Character(name, description)
 {
-
+    this->status = false;
 }
+
+NPC::~NPC(){}
+
+

@@ -24,6 +24,7 @@ private:
 	void printHelp();
     void goRoom(Command command);
     void openDoor(Command command);
+    string go(string direction);
     void createItems();
     void displayItems();
 
@@ -34,7 +35,7 @@ public:
 	ZorkUL();
 	void play();
     void printWelcome();
-    string go(string direction);
+
 
     inline Room* getCurrentRoom() const
         {
