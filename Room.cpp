@@ -1,21 +1,25 @@
 #include "Room.h"
 #include "Command.h"
 
+bool locked;
 
-Room::Room(string description) {
+Room::Room(string description, bool locked) {
 	this->description = description;
+    this->locked = locked;
 }
 
 void Room::setExits(Room *north, Room *east, Room *south, Room *west) {
 	if (north != NULL)
-		exits["north"] = north;
+        exits["door"] = north;
 	if (east != NULL)
-		exits["east"] = east;
+        exits["right"] = east;
 	if (south != NULL)
 		exits["south"] = south;
 	if (west != NULL)
-		exits["west"] = west;
+        exits["left"] = west;
 }
+
+
 
 string Room::shortDescription() {
 	return description;
@@ -40,6 +44,7 @@ Room* Room::nextRoom(string direction) {
 	return next->second; // If there is a room, remove the "second" (Room*)
 				// part of the "pair" (<string, Room*>) and return it.
 }
+
 
 void Room::addItem(Item *inItem) {
     //cout <<endl;
@@ -67,7 +72,7 @@ int Room::numberOfItems() {
     return itemsInRoom.size();
 }
 
-int Room::isItemInRoom(string inString)
+ int Room::isItemInRoom(string inString)
 {
     int sizeItems = (itemsInRoom.size());
     if (itemsInRoom.size() < 1) {
@@ -87,4 +92,19 @@ int Room::isItemInRoom(string inString)
         }
     return -1;
 }
+
+ bool getLocked(){
+     return locked;
+ }
+
+ void setLocked(bool newLocked){
+     locked = newLocked;
+ }
+
+ void Room::addImage(Image *img)
+ {
+     images.push_back(img);
+ }
+
+
 

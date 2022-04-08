@@ -7,24 +7,15 @@
 using namespace std;
 
 class Item {
-private:
+protected:
 	string description;
-	string longDescription;
-	int weightGrams;
-	float value;
-	bool weaponCheck;
+    string longDescription;
 
 public:
-    Item (string description, int inWeight, float inValue);
     Item (string description);
+    ~Item();
 	string getShortDescription();
-    string getLongDescription();
-	int getWeight();
-	void setWeight(int weightGrams);
-	float getValue();
-	void setValue(float value);
-	int getWeaponCheck();
-	void setWeaponCheck(int weaponCheck);
+    virtual string getLongDescription();
 };
 
 #endif /*ITEM_H_*/

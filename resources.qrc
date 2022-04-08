@@ -1,0 +1,8 @@
+<RCC>
+    <qresource prefix="/text">
+        <file>wordle_words</file>
+    </qresource>
+    <qresource prefix="/img">
+        <file>img/lr_n.png</file>
+    </qresource>
+</RCC>
