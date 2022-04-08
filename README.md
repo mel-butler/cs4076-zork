@@ -38,16 +38,16 @@
 
 
 
-- [] unions
+- [ ] unions
 
-- [] abstract classes
+- [ ] abstract classes
 
-- [] copy constructors (deep, shallow copy)
+- [ ] copy constructors (deep, shallow copy)
 
-- [] bit structures
+- [ ] bit structures
 
-- [] c++ object construction sequence
+- [ ] c++ object construction sequence
 
-- [] multiple inheritance
+- [ ] multiple inheritance
 
-- []  memory management
+- [ ]  memory management
