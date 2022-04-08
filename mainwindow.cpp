@@ -13,6 +13,8 @@ MainWindow::MainWindow(QWidget *parent) :
     ui->outputConsole->setVisible(true);
     ui->outputConsole->setText(toQString(dialogue::welcome));
 
+    ui->door->setStyleSheet("background-color: rgba(255, 255, 255, 0);");
+
     ui->outputConsole->setVisible(true);
     QTimer::singleShot(4000, this, [this] () { ui->outputConsole->setText(toQString(RoomDialogue::lr_n)); });
 
@@ -43,6 +45,23 @@ void MainWindow::updateImage(QString dest)
 
 
 
-void MainWindow::on_right_button_clicked(){
+void MainWindow::on_right_button_released(){
+    zork->go("right");
+     ui->outputConsole->setText(QString::fromStdString(zork->currentRoom->longDescription()));
+    imageDes = toQString(zork->getCurrentRoom()->getImages().at(0)->getImage());
+    updateImage(imageDes);
+}
 
+void MainWindow::on_left_button_released(){
+    zork->go("left");
+     ui->outputConsole->setText(QString::fromStdString(zork->currentRoom->longDescription()));
+    imageDes = toQString(zork->getCurrentRoom()->getImages().at(0)->getImage());
+    updateImage(imageDes);
+}
+
+void MainWindow::on_door_released(){
+    zork->go("door");
+     ui->outputConsole->setText(QString::fromStdString(zork->currentRoom->longDescription()));
+    imageDes = toQString(zork->getCurrentRoom()->getImages().at(0)->getImage());
+    updateImage(imageDes);
 }

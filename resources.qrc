@@ -3,6 +3,10 @@
         <file>wordle_words</file>
     </qresource>
     <qresource prefix="/img">
-        <file>img/lr_n.png</file>
+        <file>lr_n.png</file>
+        <file>b_e.png</file>
+        <file>b_n.png</file>
+        <file>b_w.png</file>
+        <file>door.png</file>
     </qresource>
 </RCC>

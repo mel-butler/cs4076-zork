@@ -30,17 +30,24 @@ void ZorkUL::createRooms()  {
             *l_n, *l_s, *l_e, *l_w; //lab
 
     lr_n = new Room(RoomDialogue::lr_n, false);
-        lr_n->addImage(new Image(":/img/img/lr_n.png"));
+        lr_n->addImage(new Image(":/img/lr_n.png"));
     lr_s = new Room(RoomDialogue::lr_s, false);
+        lr_s->addImage(new Image(":/img/b_e.png"));
         lr_s->addItem(new Item("leg_armour"));
     lr_e = new Room(RoomDialogue::lr_e, false);
+        lr_e->addImage(new Image(":/img/door.png"));
     lr_w = new Room(RoomDialogue::lr_w, false);
+        lr_w->addImage(new Image(":/img/b_e.png"));
 
     b_n = new Room(RoomDialogue::b_n, false);
+        b_n->addImage(new Image(":/img/b_n.png"));
     b_s = new Room(RoomDialogue::b_s, false);
+        b_s->addImage(new Image(":/img/b_e.png"));
         b_s->addItem(new Item("helmet"));
     b_e = new Room(RoomDialogue::b_e, false);
+        b_e->addImage(new Image(":/img/b_e.png"));
     b_w = new Room(RoomDialogue::b_w, false);
+        b_w->addImage(new Image(":/img/b_w.png"));
 
     o_n = new Room(RoomDialogue::o_n, false);
     o_s = new Room(RoomDialogue::o_s, false);
@@ -228,6 +235,20 @@ void ZorkUL::openDoor(Command command) {
             currentRoom = nextRoom;
             cout << currentRoom->longDescription() << endl;
         }
+    }
+}
+
+string ZorkUL::go(string direction) {
+    //Make the direction lowercase
+    //transform(direction.begin(), direction.end(), direction.begin(),:: tolower);
+    //Move to the next room
+    Room* nextRoom = currentRoom->nextRoom(direction);
+    if (nextRoom == NULL)
+        throw Exception();
+    else
+    {
+        currentRoom = nextRoom;
+        return currentRoom->longDescription();
     }
 }
 

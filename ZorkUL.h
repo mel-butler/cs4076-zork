@@ -34,6 +34,7 @@ public:
 	ZorkUL();
 	void play();
     void printWelcome();
+    string go(string direction);
 
     inline Room* getCurrentRoom() const
         {

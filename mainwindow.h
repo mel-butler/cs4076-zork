@@ -26,8 +26,9 @@ public:
     void parseInput(const string &input);
 
 private slots:
-    void on_right_button_clicked();
-   // void on_left_button_clicked();
+    void on_right_button_released();
+    void on_left_button_released();
+    void on_door_released();
 
 private:
     QString imageDes;
