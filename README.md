@@ -26,7 +26,13 @@ operator overloading - done
 
 destructors - done
 
+template classes - done
+
 advanced pre-processors directives - done??? i think
+
+
+
+
 
 
 unions
@@ -40,8 +46,6 @@ bit structures
 c++ object construction sequence
 
 initializer list
-
-template classes
 
 multiple inheritance
 
